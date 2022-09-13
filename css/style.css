@@ -86,18 +86,20 @@ header{
 
 .title{
     position: absolute; 
-    top: 25%;
-    left: 20%; 
+    top: 50%;
+    left: 50%; 
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
 }
 
 .title img{
-    width: 750px;
+    width: 700px;
     margin-bottom: 20px;
     align-items: center;
 }
 
 .title p{
-    font-size: 45px;
+    font-size: 35px;
     text-align: center;
     color: #ffffff;
     font-family: "Futura"; 
@@ -109,11 +111,13 @@ nav{
   position: absolute; 
   top: 0;
   right: 0;
+  z-index: 2; 
 }
 
 ul{
   overflow: hidden; 
   float: left; 
+  margin: 0 30px; 
 }
 
 li{
@@ -123,11 +127,12 @@ li{
 
 nav a{
   display: block; 
-  padding: 30px 15px 0;
+  padding: 25px 15px 0;
   color: #fff;
   font-family: "Futura"; 
   font-size: 20px;
   transition: 0.5s; 
+  text-decoration: none;
 }
 
 nav a:hover{
@@ -136,11 +141,12 @@ nav a:hover{
 
 @media(max-width:450px){
   .title img{
-    width: 70px;
+    width: 300px;
     margin: auto;
+    padding-bottom: 20px;
   }
   .title p{
-    font-size: 100%;
+    font-size: 120%;
     text-align: center;
     color: #fff;
     font-family: "Futura"; 
@@ -172,7 +178,7 @@ h2{
   }
 }
 
-#introduction{
+section #introduction{
   display: flex;
   justify-content: center;
 }
@@ -185,19 +191,20 @@ h2{
 }
 
 .intro_detail img{
-  width: 500px;
+  width: 380px;
   object-fit: contain; 
 }
 
 .intro_right{
-  width: 500px;
+  width: 380px;
   margin: 20px;
   line-height: 2; 
 }
 
 .intro_right p{
-  width: 400px;
-  margin: 0 auto 20px;
+  width: 320px;
+  margin: 0 auto auto 90px;
+  font-size: 13px;
   font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', sans-serif;
 }
 
@@ -221,9 +228,10 @@ h2{
 }
 
 .intro_left{
-  width: 500px;
+  width: 320px;
   margin: 20px;
   line-height: 2; 
+  font-size: 13px;
 }
 
 .intro_left a{
@@ -500,6 +508,7 @@ h2{
   flex-direction: column; 
   padding-bottom: 40px;
 }
+
 
 @media(max-width: 450px){
   .map{
